@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biometría - Monitor de Ozono (Sprint 0)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+        <header class="encabezado-proyecto">
+            <span class="insignia-sprint">Sprint 0</span>
+            <h1>Biometría: Monitor de Ozono</h1>
+            <p class="subtitulo">Visualización de mediciones captadas por sensor de ozono</p>
+            <div class="panel-estado">
+                <div class="selector-modo">
+                    <label for="select-modo"><strong>Fuente de datos:</strong></label>
+                    <select id="select-modo" class="selector-desplegable">
+                        <option value="fake" selected>Modo Fake (Mock simulado en memoria)</option>
+                        <option value="real">Servidor REST Real (http://localhost:3000)</option>
+                    </select>
+                </div>
+                <span id="estado-carga" class="cargando">Iniciando conexión...</span>
+            </div>
+            <div class="fila-botones">
+                <button id="btn-refrescar" class="boton-accion">🔄 Recargar Mediciones</button>
+                <button id="btn-limpiar" class="boton-accion boton-peligro">🗑️ Vaciar Historial</button>
+                <label class="etiqueta-auto"><input type="checkbox" id="check-auto" checked> Auto-recarga (2s)</label>
+            </div>
+        </header>
+
+        <section class="panel-tabla">
+            <div class="tabla-contenedor">
+                <table id="tabla-mediciones">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nivel Ozono</th>
+                            <th>Hora Local</th>
+                            <th>Unix Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filas inyectadas por app.js a través de LogicaCliente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="pie-pagina">
+            <p>Asignatura de Biometría - EPSG UPV</p>
+        </footer>
+    </main>
+
+    <!-- Scripts desacoplados: primero el proxy de lógica de negocio, luego la GUI -->
+    <script src="../frontend_business_logic/LogicaCliente.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

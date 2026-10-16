@@ -1,0 +1,30 @@
+{
+  "name": "biometria-backend",
+  "version": "1.0.0",
+  "description": "Backend y Base de Datos para el proyecto de Biometria - Sprint 0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.10",
+    "@types/supertest": "^7.2.1",
+    "jest": "^29.7.0",
+    "jest-util": "^30.5.1",
+    "supertest": "^7.3.1",
+    "ts-jest": "^29.4.14",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  }
+}

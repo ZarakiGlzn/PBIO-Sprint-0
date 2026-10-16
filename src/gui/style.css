@@ -1,0 +1,258 @@
+/* Estilos Mobile-First y Responsivos para Sprint 0 */
+:root {
+    --color-fondo: #0f172a;
+    --color-tarjeta: #1e293b;
+    --color-texto: #f8fafc;
+    --color-texto-secundario: #94a3b8;
+    --color-primario: #0284c7;
+    --color-primario-hover: #0369a1;
+    --color-acento: #38bdf8;
+    --color-borde: #334155;
+    --color-exito: #10b981;
+    --color-advertencia: #f59e0b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-principal {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Encabezado */
+.encabezado-proyecto {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.insignia-sprint {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.subtitulo {
+    font-size: 0.875rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 1rem;
+}
+
+.panel-estado {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(15, 23, 42, 0.6);
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.selector-modo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.selector-desplegable {
+    background-color: var(--color-tarjeta);
+    color: var(--color-acento);
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.selector-desplegable:focus {
+    border-color: var(--color-acento);
+}
+
+.indicador-modo {
+    font-weight: 600;
+    color: var(--color-acento);
+}
+
+#estado-carga.cargando {
+    color: var(--color-advertencia);
+}
+
+#estado-carga.exito {
+    color: var(--color-exito);
+}
+
+#estado-carga.error {
+    color: #ef4444;
+}
+
+.boton-accion {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.boton-accion:hover {
+    background-color: var(--color-primario-hover);
+}
+
+.fila-botones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.boton-peligro {
+    background-color: #b91c1c;
+}
+
+.boton-peligro:hover {
+    background-color: #991b1b;
+}
+
+.etiqueta-auto {
+    font-size: 0.85rem;
+    color: var(--color-texto-secundario);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.etiqueta-auto input {
+    cursor: pointer;
+}
+
+/* Tabla de Mediciones (Mobile First) */
+.panel-tabla {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+thead {
+    background-color: #172033;
+    border-bottom: 2px solid var(--color-borde);
+}
+
+th {
+    padding: 0.85rem 1rem;
+    font-weight: 600;
+    color: var(--color-acento);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--color-borde);
+    transition: background-color 0.15s ease;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: rgba(56, 189, 248, 0.05);
+}
+
+td {
+    padding: 0.85rem 1rem;
+    color: var(--color-texto);
+    white-space: nowrap;
+}
+
+.col-valor {
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.col-epoch {
+    font-family: monospace;
+    color: var(--color-texto-secundario);
+    font-size: 0.85rem;
+}
+
+/* Pie de página */
+.pie-pagina {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--color-texto-secundario);
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 1.85rem;
+    }
+
+    .boton-accion {
+        width: auto;
+    }
+
+    .panel-estado {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

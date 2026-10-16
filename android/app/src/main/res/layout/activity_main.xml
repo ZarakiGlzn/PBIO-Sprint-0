@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biometría - Sprint 0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/botonBuscarNuestroDispositivoBTLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔍 Buscar Nuestro Dispositivo (GTI3A-2025)"
+        android:onClick="botonBuscarNuestroDispositivoBTLEPulsado"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/botonDetenerBusquedaDispositivosBTLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⏹ Detener Búsqueda BTLE"
+        android:onClick="botonDetenerBusquedaDispositivosBTLEPulsado"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/botonFakeREST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧪 Probar Envío Fake REST (Manual)"
+        android:onClick="probarFakeREST_pulsado"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/textoEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado: Esperando acción (revisar consola Logcat)"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
